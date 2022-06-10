@@ -1,8 +1,8 @@
-name: Grab the Latest LeMans Data
+name: Grab the Latest LeMans Data for the 2022 race.
 
-#on:
-#  schedule:
-#    - cron:  '5,10,15,20,25,30,35,40,45,50,55,0 * * * *'
+on:
+ schedule:
+   - cron:  '5,10,15,20,25,30,35,40,45,50,55,0 * * * *'
 
 jobs:
   scheduled:
@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v1
       with:
-        python-version: 3.8
+        python-version: 3.9
     - uses: actions/cache@v1
       name: Configure pip caching
       with:
